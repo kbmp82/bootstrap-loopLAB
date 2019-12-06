@@ -1,0 +1,19 @@
+.home-section {
+    background: url('/assets/images/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 700px;
+
+
+
+   &--overlay {
+       background: rgba(0,0,0,0.7);
+       width: 100%;
+       min-height: 700px;
+    
+   }
+
+   &__inner {
+      padding-top: 8em;
+   }
+}

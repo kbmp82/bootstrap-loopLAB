@@ -1,7 +1,8 @@
 body {
     background-color: #333;
-    font-family: 'roboto', sans-serif;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: 300;
 }
 
 img {
@@ -14,8 +15,4 @@ img {
 /* this stops padding from causing elements to be pushed down when you want them side by side */
 * {
     box-sizing: border-box;  
-}
-
-a {
-    color: $mainOrange;
 }

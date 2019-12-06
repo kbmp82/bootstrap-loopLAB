@@ -1,0 +1,13 @@
+.feature-item {
+
+    margin-bottom: -1.5em;
+
+    &__icon {
+        border: $mainBlue 2px solid;
+        border-radius: 7px;
+        color: $mainBlue;
+        padding: 2px;
+        background-color: #fff;
+        
+    }
+}

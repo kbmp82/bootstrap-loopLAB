@@ -1,0 +1,9 @@
+.contact-form {
+    background-color: $mainBlue;
+    margin-top: 3em;
+
+    &--opacity {
+        opacity: .8;
+    }
+  
+}

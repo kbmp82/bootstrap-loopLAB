@@ -15,13 +15,13 @@ require('postcss-hexrgba'),
 require('autoprefixer'),
 ];
 
-// class RunAfterCompile {
-// apply(compiler) {
-//     compiler.hooks.done.tap('Copy images', () => {
-//         fse.copySync('./app/assets/images', './docs/assets/images')
-//     });
-// }
-// }
+class RunAfterCompile {
+apply(compiler) {
+    compiler.hooks.done.tap('Copy images', () => {
+        fse.copySync('./app/assets/images', './docs/assets/images')
+    });
+}
+}
 
 //apply HtmlWebpackPlugin to each html file
 let pages = fse.readdirSync('./app').filter((file) => {
@@ -69,7 +69,7 @@ if (currentTask === 'dev') {
 
     cssConfig.use.unshift('style-loader');
     config.output = {
-        filename: 'main.js',
+        filename: 'bundled.js',
         path: path.resolve(__dirname, 'app')
     };
 
@@ -100,7 +100,7 @@ if (currentTask === 'dev') {
     config.plugins.push(
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
-        // new RunAfterCompile()
+        new RunAfterCompile()
         );
     postCSSPlugins.push(require('cssnano'));
 }
