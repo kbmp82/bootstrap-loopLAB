@@ -3,11 +3,20 @@
     margin-bottom: -1.5em;
 
     &__icon {
-        border: $mainBlue 2px solid;
         border-radius: 7px;
-        color: $mainBlue;
         padding: 2px;
-        background-color: #fff;
+        
+        &--blue {
+            color: $mainBlue;
+            border: $mainBlue 2px solid;
+            background-color: #fff;
+        }
+
+        &--dark-grey {
+            background-color: #333;
+            color: #fff;
+            border: #6c757d 2px solid;
+        }
         
     }
 }
